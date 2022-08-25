@@ -8,7 +8,7 @@
 4. Push your commits and rename your repo to `xxh-plugin-zsh-yourtitle`
 5. Install the plugin to your xxh home:
 ```
-xxh +I xxh-plugin-zsh-yourtitle+git+https://github.com/yourname/xxh-plugin-zsh-yourtitle
+xxh +I xxh-plugin-zsh-profiles+git+https://github.com/wichael/xxh-plugin-zsh-profiles
 ```
 6. Try connect in update mode: `xxh [user@]host[:port] +s zsh +if`
 
