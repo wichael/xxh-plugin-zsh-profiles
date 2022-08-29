@@ -2,6 +2,7 @@
 
 CDIR="$(cd "$(dirname "$0")" && pwd)"
 build_dir=$CDIR/build
+everythingToCopy="$CDIR/copy"
 
 while getopts A:K:q option
 do
@@ -15,6 +16,28 @@ done
 
 rm -rf $build_dir
 mkdir -p $build_dir
+
+
+
+
+while IFS= read -r cf; do
+   cp -r ~/$cf $build_dir/
+done < $everythingToCopy
+
+tar -cvf $build_dir/xxh-plugin-zsh-profiles.tar .
+
+while IFS= read -r cf; do
+   rm -rf $build_dir/$cf
+done < $everythingToCopy
+
+
+
+# source files
+
+
+# renmame ~ in files
+
+
 
 for f in pluginrc.zsh
 do
